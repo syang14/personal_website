@@ -1,125 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Research Experience | Shuo YANG</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="Placeholder for Research Experience. here is the first project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Research Experience">
-<meta property="og:url" content="http://yoursite.com/ResearchExperience/index.html">
-<meta property="og:site_name" content="Shuo YANG">
-<meta property="og:description" content="Placeholder for Research Experience. here is the first project.">
-<meta property="og:updated_time" content="2017-11-26T12:43:31.926Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Research Experience">
-<meta name="twitter:description" content="Placeholder for Research Experience. here is the first project.">
-  
-    <link rel="alternative" href="/atom.xml" title="Shuo YANG" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
-</head>
-<body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">Shuo YANG</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home</a></li><li><a href="/CV/fake_CV.pdf">CV</a></li><li><a href="/ResearchExperience/">Research Experience</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="page-undefined" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/ResearchExperience/index.html" class="article-date">
-  <time datetime="2017-11-26T12:43:31.926Z" itemprop="datePublished">2017-11-26</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shuo YANG</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      Research Experience
-    </h1>
-  
+extends partial/layout
 
-	</header>
-	<div class="entry-content">
-		
-    	<p>Placeholder for Research Experience.</p>
-<p><a href="./projects/first_project.html">here</a> is the first project.</p>
+block site_title
+    != page.title + " · " + config.title
 
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-    
-  
-</article>
+block description
+    - var desc = page.desc || page.title + ' - ' + config.author;
+    meta(name="description", content=desc)
 
+block container
+    include mixins/post
+    +post(page)
 
+block pagination
+    include mixins/paginator
+    +post()
+    include partial/comment
 
-
-    </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
-</div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">Shuo YANG</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2017 Shuo YANG<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-  </div>
-</body>
-</html>
+block copyright
+    include partial/copyright
