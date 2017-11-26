@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/ResearchExperience/projects/first_project.html</loc>
+    
+    <lastmod>2017-11-26T12:44:39.302Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/ResearchExperience/index.html</loc>
+    
+    <lastmod>2017-11-26T12:43:31.926Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/CV/index.html</loc>
+    
+    <lastmod>2017-11-26T11:13:09.585Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/11/26/hello-world/</loc>
+    
+    <lastmod>2017-11-26T10:13:58.565Z</lastmod>
+    
+  </url>
+  
+</urlset>
